@@ -80,4 +80,20 @@ angular:
 
 ```bash
 rosrun Assem2 teleop_keyboard.py
-``` 
+```
+
+### 🧾 Bước 8: Đọc giá trị encoder từ bánh xe
+
+Có thể kiểm tra vị trí và vận tốc của các joint (bánh xe & tay máy) bằng cách đọc topic:
+
+```bash
+rostopic echo /joint_states
+```
+📌 Topic này cung cấp thông tin về:
+
+    name: tên các joint (VD: joint_L, joint_R)
+
+    position: vị trí hiện tại của joint (theo radian)
+
+    velocity: tốc độ góc hiện tại của joint (rad/s)
+
