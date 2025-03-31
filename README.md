@@ -23,5 +23,4 @@ Robot di động 2 bánh với tay máy 2 bậc tự do chuyển đông xoay(rot
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 
-git clone [https://github.com/your_username/your_repo_name.git
-](https://github.com/thaithinhhl/ROS.git)
+git clone https://github.com/thaithinhhl/ROS.git
