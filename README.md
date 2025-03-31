@@ -40,3 +40,17 @@ catkin_make
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
+## 🛰️ Mô phỏng
+
+### 🎯 Bước 4: Khởi chạy mô phỏng trong Gazebo 
+
+``` bash
+roslauch Assem2 gazebo.launch
+```
+
+### ⚙️ Bước 5: Load các controller cho robot 
+``` bash
+roslaunch Assem2 start_controllers.launch
+```
+### 🧭 Bước 6: Mở RViz để quan sát robot
+``` roslauch Assem2 display.launch 
