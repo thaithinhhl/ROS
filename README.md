@@ -55,7 +55,7 @@ roslaunch Assem2 start_controllers.launch
 
 ### 🌐 Bước 6: Mở RViz để quan sát robot
 ```
-roslauch Assem2 display.launch
+roslaunch Assem2 display.launch
 ```
 
 ### 🎮 Bước 7: Điều khiển robot di chuyển
