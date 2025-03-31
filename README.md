@@ -3,7 +3,7 @@
 # Robot Simulation with ROS and Gazebo
 
 ## Mô tả
-Robot di động 2 bánh với tay máy 2 bậc tự do, tích hợp cảm biến Lidar và Camera.
+Robot di động 2 bánh với tay máy 2 bậc tự do chuyển đông xoay(rotation), tích hợp cảm biến Lidar,Camera và Encoder.
 
 ## Yêu cầu
 - Ubuntu 20.04
@@ -19,3 +19,8 @@ Robot di động 2 bánh với tay máy 2 bậc tự do, tích hợp cảm biế
 
 ## Cài đặt
 1. Tạo workspace và clone repository:
+
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+
+git clone https://github.com/your_username/your_repo_name.git
