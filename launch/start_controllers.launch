@@ -6,7 +6,7 @@
   <node name="arm_joint_controller_spawner" pkg="controller_manager" type="spawner" output="screen"
         args="joint_state_controller arm_1_joint_controller arm_2_joint_controller" />
 
-  <!-- Start diff_drive_controller -->
-  <node name="diff_drive_controller_spawner" pkg="controller_manager" type="spawner"
-        args="diff_drive_controller" />
+  <!-- Không cần khởi động diff_drive_controller vì đã được khởi động trong gazebo.launch -->
+  <!-- <node name="diff_drive_controller_spawner" pkg="controller_manager" type="spawner"
+        args="diff_drive_controller" /> -->
 </launch>
