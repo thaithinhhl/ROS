@@ -1,0 +1,24 @@
+arm_1_joint_controller:
+  type: "position_controllers/JointPositionController"
+  joint: "joint_arm1"
+  pid: {p: 1.0, i: 0.05, d: 1.0}
+
+arm_2_joint_controller:
+  type: "position_controllers/JointPositionController"
+  joint: "joint_arm2"
+  pid: {p: 1.0, i: 0.05, d: 1.0}
+
+joint_state_controller:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50
+
+diff_drive_controller:
+  type: "diff_drive_controller/DiffDriveController"
+  left_wheel: 'joint_L'
+  right_wheel: 'joint_R'
+  publish_rate: 50
+  cmd_vel_timeout: 0.25
+  base_frame_id: "base_link"
+  wheel_separation: 0.1      
+  wheel_radius: 0.05         
+  velocity_rolling_window_size: 10

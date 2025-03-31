@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="Assem2">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0824061936587566 1.37205054136225E-06 0.00974589947896125" rpy="0 0 0" />
+      <mass value="0.602757609932735" />
+      <inertia ixx="0.000520371186768291" ixy="-8.75385524365518E-08" ixz="3.11962849407192E-05" iyy="0.00190685028185422" iyz="7.57869371340779E-09" izz="0.00232604437719545" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="R_Link">
+    <inertial>
+      <origin xyz="5.55111512312578E-17 -0.0546969469389906 0" rpy="0 0 0" />
+      <mass value="0.0194371447886429" />
+      <inertia ixx="3.14558980182433E-06" ixy="2.44447746510133E-22" ixz="3.19958523108531E-22" iyy="5.78704636806893E-06" iyz="-2.49258946404791E-23" izz="3.14558980182433E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/R_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_R" type="continuous">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="R_Link" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="10" />
+    <dynamics damping="0.01" friction="0.01" />
+  </joint>
+
+  <link name="L_Link">
+    <inertial>
+      <origin xyz="4.16333634234434E-17 0.0546969469389906 4.16333634234434E-17" rpy="0 0 0" />
+      <mass value="0.0194371447886429" />
+      <inertia ixx="3.14558980182433E-06" ixy="1.23753153648335E-22" ixz="-2.42151415917026E-22" iyy="5.78704636806893E-06" iyz="1.24482405285302E-22" izz="3.14558980182433E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/L_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_L" type="continuous">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="L_Link" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="10" />
+    <dynamics damping="0.01" friction="0.01" />
+  </joint>
+
+  <link name="lidar_Link">
+    <inertial>
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <mass value="0.0308288329100048" />
+      <inertia ixx="4.6311080166665E-06" ixy="6.37236764452981E-54" ixz="-4.01942650190399E-38" iyy="4.6311080166665E-06" iyz="1.44560169672774E-38" izz="6.30264807397255E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/lidar_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_lidar" type="fixed">
+    <origin xyz="0.155 0 0.049" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="lidar_Link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="Link_arm1">
+    <inertial>
+      <origin xyz="0.0509330109774197 9.71445146547012E-17 0.005" rpy="0 0 0" />
+      <mass value="0.0186366701789183" />
+      <inertia ixx="1.09488685809176E-06" ixy="5.82335151237331E-22" ixz="-1.55352332474711E-21" iyy="1.57592192551664E-05" iyz="-3.4963206535038E-23" izz="1.53586055864204E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/Link_arm1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/Link_arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_arm1" type="revolute">
+    <origin xyz="0.02 -0.005 0.04" rpy="-1.5708 -1.4936 0" />
+    <parent link="base_link" />
+    <child link="Link_arm1" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.35" upper="0.35" effort="5" velocity="2" />
+    <dynamics damping="0.01" friction="0.01" />
+  </joint>
+
+  <link name="Link-arm2">
+    <inertial>
+      <origin xyz="0.0509330109774186 -1.13797860024079E-15 0.015" rpy="0 0 0" />
+      <mass value="0.0186366701789183" />
+      <inertia ixx="1.09488685809176E-06" ixy="-1.7205356741103E-21" ixz="-1.50611234960184E-21" iyy="1.57592192551664E-05" iyz="-4.00577295318355E-23" izz="1.53586055864204E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/Link-arm2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://Assem2/meshes/Link-arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_arm2" type="revolute">
+    <origin xyz="0.085 0 -0.01" rpy="0 0 1.3703" />
+    <parent link="Link_arm1" />
+    <child link="Link-arm2" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.35" upper="0.35" effort="5" velocity="2" />
+    <dynamics damping="0.01" friction="0.01" />
+  </joint>
+
+  <link name="camera_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <origin xyz="0.2 0 0.01" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+  </joint>
+
+  <gazebo>
+    <plugin name="diff_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <robotNamespace>/</robotNamespace>
+      <publishWheelTF>true</publishWheelTF>
+      <publishTf>true</publishTf>
+      <publishWheelJointState>true</publishWheelJointState>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100.0</updateRate>
+      <leftJoint>joint_L</leftJoint>
+      <rightJoint>joint_R</rightJoint>
+      <wheelSeparation>0.1</wheelSeparation>
+      <wheelDiameter>0.05</wheelDiameter>
+      <torque>5</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_link</robotBaseFrame>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>false</legacyModeNS>
+      <controlPeriod>0.001</controlPeriod>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="lidar_Link">
+    <sensor type="ray" name="lidar_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>20</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14</min_angle>
+            <max_angle>3.14</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>10.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin name="lidar_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/lidar/scan</topicName>
+        <frameName>lidar_Link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.0</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <transmission name="joint_arm1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_arm1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator_arm1">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="joint_arm2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_arm2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator_arm2">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  
+</robot>
