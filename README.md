@@ -53,8 +53,9 @@ roslauch Assem2 gazebo.launch
 roslaunch Assem2 start_controllers.launch
 ```
 
-### 🧭 Bước 6: Mở RViz để quan sát robot
-``` roslauch Assem2 display.launch
+### 🌐 Bước 6: Mở RViz để quan sát robot
+```
+roslauch Assem2 display.launch
 ```
 
 ### 🎮 Bước 7: Điều khiển robot di chuyển
@@ -75,7 +76,7 @@ angular:
   y: 0.0
   z: 0.5" -r 10
 ```
-#### 🧭 Cách 2: Chạy script điều khiển bằng bàn phím
+#### 🕹️ Cách 2: Chạy script điều khiển bằng bàn phím
 
 ```bash
 rosrun Assem2 teleop_keyboard.py
