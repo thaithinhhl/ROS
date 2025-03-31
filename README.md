@@ -91,9 +91,9 @@ rostopic echo /joint_states
 ```
 📌 Topic này cung cấp thông tin về:
 
-    - name: tên các joint (VD: joint_L, joint_R)
+  - name: tên các joint (VD: joint_L, joint_R)
 
-    - position: vị trí hiện tại của joint (theo radian)
+  - position: vị trí hiện tại của joint (theo radian)
 
-    - velocity: tốc độ góc hiện tại của joint (rad/s)
+  - velocity: tốc độ góc hiện tại của joint (rad/s)
 
