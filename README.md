@@ -52,5 +52,31 @@ roslauch Assem2 gazebo.launch
 ``` bash
 roslaunch Assem2 start_controllers.launch
 ```
+
 ### 🧭 Bước 6: Mở RViz để quan sát robot
-``` roslauch Assem2 display.launch 
+``` roslauch Assem2 display.launch
+```
+
+### 🎮 Bước 7: Điều khiển robot di chuyển
+
+Bạn có 2 cách để điều khiển robot di động:
+
+---
+
+#### 🧭 Cách 1: Gửi lệnh trực tiếp qua topic `/cmd_vel`
+
+```bash
+rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+  x: 0.2
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.5" -r 10
+```
+#### 🧭 Cách 2: Chạy script điều khiển bằng bàn phím
+
+```bash
+rosrun Assem2 teleop_keyboard.py
+``` 
