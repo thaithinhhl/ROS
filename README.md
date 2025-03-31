@@ -58,7 +58,17 @@ roslaunch Assem2 start_controllers.launch
 roslaunch Assem2 display.launch
 ```
 
-### 🎮 Bước 7: Điều khiển robot di chuyển
+### 🦾 Bước 7: Điều khiển tay máy (Arm Controller)
+
+  Robot Assem2 có 2 khớp tay máy: `joint_arm1` và `joint_arm2`, được điều khiển bằng **position controllers**.
+
+  Gửi lệnh trực tiếp bằng `rostopic pub`
+
+```bash
+rostopic pub /arm_1_joint_controller/command std_msgs/Float64 "data: 0.2"
+```
+
+### 🎮 Bước 8: Điều khiển robot di chuyển
 
 2 cách để điều khiển robot di chuyển:
 
@@ -82,7 +92,7 @@ angular:
 rosrun Assem2 teleop_keyboard.py
 ```
 
-### 🧾 Bước 8: Đọc giá trị encoder từ bánh xe
+### 🧾 Bước 9: Đọc giá trị encoder từ bánh xe
 
 Có thể kiểm tra vị trí và vận tốc của các joint (bánh xe & tay máy) bằng cách đọc topic:
 
