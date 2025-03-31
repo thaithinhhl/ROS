@@ -65,7 +65,9 @@ roslaunch Assem2 display.launch
   Gửi lệnh trực tiếp bằng `rostopic pub`
 
 ```bash
-rostopic pub /arm_1_joint_controller/command std_msgs/Float64 "data: 0.2"
+rostopic pub /arm_1_joint_controller/command std_msgs/Float64 "data: 0.5"
+
+rostopic pub /arm_2_joint_controller/command std_msgs/Float64 "data: 0.5"
 ```
 
 ### 🎮 Bước 8: Điều khiển robot di chuyển
