@@ -1,4 +1,3 @@
-# ROS
 
 # Robot Simulation with ROS and Gazebo
 
@@ -17,10 +16,11 @@ Robot di động 2 bánh với tay máy 2 bậc tự do chuyển đông xoay(rot
   - robot_state_publisher
   - joint_state_publisher
 
-## Cài đặt
-1. Tạo workspace và clone repository:
+## 🚀 Cài đặt
 
+### 🔧 Bước 1: Tạo ROS Workspace
+
+```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-
-git clone https://github.com/thaithinhhl/ROS.git
+catkin_init_workspace
