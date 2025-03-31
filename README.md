@@ -23,8 +23,8 @@ Robot di động 2 bánh với tay máy 2 bậc tự do chuyển đông xoay(rot
 ```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-catkin_init_workspace  
-
+catkin_init_workspace   
+ 
 
 📥 Bước 2: Clone Repository
 git clone https://github.com/thaithinhhl/ROS.git
