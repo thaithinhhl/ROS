@@ -62,7 +62,7 @@ roslaunch Assem2 display.launch
 ### 🦾 Bước 7: Điều khiển tay máy (Arm Controller)
 Điều khiển bẳng 4 phím mũi tên trên bàn phím
 ```bash
-rosrun Assem2 arm_teleop_keyboard
+rosrun Assem2 arm_teleop_keyboard.py
 ```
 
 ### 🎮 Bước 8: Điều khiển robot di chuyển
