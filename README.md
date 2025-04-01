@@ -61,6 +61,8 @@ roslaunch Assem2 start_controllers.launch
 ```
 roslaunch Assem2 display.launch
 ```
+![image](https://github.com/user-attachments/assets/fc796dbb-6f06-4af7-b112-a70360c270c4)
+
 
 ### 🦾 Bước 7: Điều khiển tay máy (Arm Controller)
 Điều khiển bẳng 4 phím mũi tên trên bàn phím
