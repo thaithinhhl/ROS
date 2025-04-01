@@ -59,15 +59,9 @@ roslaunch Assem2 display.launch
 ```
 
 ### 🦾 Bước 7: Điều khiển tay máy (Arm Controller)
-
-  Robot Assem2 có 2 khớp tay máy: `joint_arm1` và `joint_arm2`, được điều khiển bằng **position controllers**.
-
-  Gửi lệnh trực tiếp bằng `rostopic pub`
-
+Điều khiển bẳng 4 phím mũi tên trên bàn phím
 ```bash
-rostopic pub /arm_1_joint_controller/command std_msgs/Float64 "data: 0.5"
-
-rostopic pub /arm_2_joint_controller/command std_msgs/Float64 "data: 0.5"
+roslaunch Asssem2 arm_teleop_keyboard
 ```
 
 ### 🎮 Bước 8: Điều khiển robot di chuyển
