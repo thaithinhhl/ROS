@@ -45,7 +45,7 @@ source ~/.bashrc
 ### 🎯 Bước 4: Khởi chạy mô phỏng trong Gazebo 
 
 ``` bash
-roslauch Assem2 gazebo.launch
+roslaunch Assem2 gazebo.launch
 ```
 
 ### ⚙️ Bước 5: Load các controller cho robot 
