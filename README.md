@@ -29,7 +29,7 @@ catkin_init_workspace
 ### 📥 Bước 2: Clone Repository
 
 ```bash
-git clone https://github.com/thaithinhhl/Assem2.git
+git clone https://github.com/thaithinhhl/ROS.git
 cd ~/catkin_ws
 catkin_make
 ```
