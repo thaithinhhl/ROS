@@ -16,6 +16,12 @@ Robot di động 2 bánh với tay máy 2 bậc tự do chuyển đông xoay(rot
   - robot_state_publisher
   - joint_state_publisher
 
+
+
+https://github.com/user-attachments/assets/461f61f1-2a38-4e33-bd87-ab3fbf26f5e6
+
+
+
 ## 🚀 Cài đặt
 
 ### 🔧 Bước 1: Tạo ROS Workspace
