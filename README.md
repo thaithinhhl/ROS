@@ -1,6 +1,10 @@
 
 # Robot Simulation with ROS and Gazebo
 
+PDF: 
+[ROS_GK-1.pdf](https://github.com/user-attachments/files/19553201/ROS_GK-1.pdf)
+
+
 ## Mô tả
 Robot di động 2 bánh với tay máy 2 bậc tự do chuyển đông xoay(rotation), tích hợp cảm biến Lidar,Camera và Encoder.
 
