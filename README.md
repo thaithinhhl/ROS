@@ -30,8 +30,8 @@ catkin_init_workspace
 
 ```bash
 git clone https://github.com/thaithinhhl/ROS.git
-cd ~/catkin_ws
 mv ROS Assem2
+cd ~/catkin_ws
 catkin_make
 ```
 
