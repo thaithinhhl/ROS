@@ -18,7 +18,10 @@ Robot di động 2 bánh với tay máy 2 bậc tự do chuyển đông xoay(rot
 
 
 
-https://github.com/user-attachments/assets/461f61f1-2a38-4e33-bd87-ab3fbf26f5e6
+
+https://github.com/user-attachments/assets/ec670656-c330-46bb-a782-d5b6cf47ce97
+
+
 
 
 
