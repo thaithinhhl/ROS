@@ -22,3 +22,8 @@ diff_drive_controller:
   wheel_separation: 0.1      
   wheel_radius: 0.05         
   velocity_rolling_window_size: 10
+
+gazebo_ros_control:
+  pid_gains:
+    joint_arm1: {p: 0.01, i: 0.001, d: 0.01}
+    joint_arm2: {p: 0.01, i: 0.001, d: 0.01}

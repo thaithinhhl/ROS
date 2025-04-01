@@ -2,6 +2,12 @@
   <!-- Load URDF vào ROS parameter server -->
   <param name="robot_description" command="$(find xacro)/xacro '$(find Assem2)/urdf/Assem2.urdf'" />
 
+  <!-- Load các thông số PID -->
+  <rosparam file="$(find Assem2)/config/controllers.yaml" command="load"/>
+
+  <!-- Thêm tham số này để không tự động khởi động controllers -->
+  <param name="gazebo_ros_control/auto_enable_controllers" value="false"/>
+
   <!-- Khởi động Gazebo với maze.world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find Assem2)/worlds/maze.world"/>

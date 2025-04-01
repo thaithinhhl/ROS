@@ -3,7 +3,6 @@
 import rospy
 from geometry_msgs.msg import Twist
 import sys, select, termios, tty
-import time
 
 msg = """
 ==============================
@@ -13,14 +12,14 @@ W: Tiến
 S: Lùi
 A: Rẽ trái (xoay tại chỗ)
 D: Rẽ phải
-Q: Dừng lại
-CTRL+C: Thoát
+SPACE: Dừng lại
+Q: Thoát
 ==============================
 """
 
 def getKey():
     tty.setraw(sys.stdin.fileno())
-    rlist, _, _ = select.select([sys.stdin], [], [], 0.05)
+    rlist, _, _ = select.select([sys.stdin], [], [], 0.01)
     if rlist:
         key = sys.stdin.read(1)
     else:
@@ -30,44 +29,49 @@ def getKey():
 
 if __name__ == "__main__":
     settings = termios.tcgetattr(sys.stdin)
-    rospy.init_node('teleop_keyboard_fixed', anonymous=True)
-    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
-    rate = rospy.Rate(20)
-
-    linear_speed = 5.0
-    angular_speed = 3.0
+    rospy.init_node('teleop_keyboard', anonymous=True)
+    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+    
+    # Khởi tạo message Twist
     twist = Twist()
-
+    
+    # Tốc độ cố định
+    linear_speed = 10.0    # Tăng từ 2.0 lên 10.0 m/s
+    angular_speed = 20.0   # Giữ nguyên tốc độ xoay
+    
     print(msg)
-
+    
     try:
         while not rospy.is_shutdown():
             key = getKey()
-
+            
+            # Reset tốc độ về 0
+            twist.linear.x = 0.0
+            twist.angular.z = 0.0
+            
             if key == 'w':
                 twist.linear.x = linear_speed
-                twist.angular.z = 0.0
             elif key == 's':
                 twist.linear.x = -linear_speed
-                twist.angular.z = 0.0
             elif key == 'a':
-                twist.linear.x = 0.0
                 twist.angular.z = angular_speed
             elif key == 'd':
-                twist.linear.x = 0.0
                 twist.angular.z = -angular_speed
-            elif key == 'q':
-                twist = Twist()
-            else:
+            elif key == ' ':
                 twist.linear.x = 0.0
                 twist.angular.z = 0.0
-
+            elif key == 'q':
+                break
+                
             pub.publish(twist)
-            rate.sleep()
-
+            rospy.sleep(0.01)
+            
     except Exception as e:
         print(e)
-
+        
     finally:
-        pub.publish(Twist())
+        # Dừng robot trước khi thoát
+        twist.linear.x = 0.0
+        twist.angular.z = 0.0
+        pub.publish(twist)
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
