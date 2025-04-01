@@ -25,7 +25,7 @@ https://github.com/user-attachments/assets/f2fef3fe-7e6d-499a-9c30-d6d76342fc66
 
 
 
-⚠️ **Em chạy trên máy em thì chạy ổn mà em nhờ 1 số bạn clone về thì bị lỗi khi mở gazebo. Anh mở ra mà lỗi thì có thể xem video của em chạy trên máy ạ, nếu có lỗi xảy ra hi vọng anh châm trước ạ 
+⚠️ **Em chạy trên máy em thì chạy ổn mà em nhờ 1 số bạn clone về thì bị lỗi khi mở gazebo. Anh mở ra mà lỗi thì có thể xem video của em chạy trên máy ạ, nếu có lỗi xảy ra hi vọng anh châm chước ạ 
 
 ## 🚀 Cài đặt
 
