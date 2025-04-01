@@ -48,6 +48,8 @@ source ~/.bashrc
 ``` bash
 roslaunch Assem2 gazebo.launch
 ```
+![Uploading image.png…]()
+
 
 ### ⚙️ Bước 5: Load các controller cho robot 
 ``` bash
