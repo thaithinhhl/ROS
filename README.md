@@ -19,7 +19,10 @@ Robot di động 2 bánh với tay máy 2 bậc tự do chuyển đông xoay(rot
 
 
 
-https://github.com/user-attachments/assets/ec670656-c330-46bb-a782-d5b6cf47ce97
+https://github.com/user-attachments/assets/f2fef3fe-7e6d-499a-9c30-d6d76342fc66
+
+
+
 
 
 ⚠️ **Lưu ý:** Em chạy trên máy em thì chạy ổn mà em nhờ 1 số bạn clone về thì bị lỗi khi mở gazebo. Anh mở ra mà lỗi thì có thể xem video của em chạy trên máy ạ, nếu có lỗi xảy ra hi vọng anh châm trước ạ 
